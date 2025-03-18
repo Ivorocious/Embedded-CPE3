@@ -7,37 +7,37 @@
 #pragma config LVP = OFF
 #pragma config CPD = OFF
 #pragma config WRT = OFF
-#pragma config CP = OFF 
+#pragma config CP = OFF
 
+#define  BIN(b7,b6,b5,b4,b3,b2,b1,b0) \
+    ((b7 << 7) | (b6 << 6) | (b5 << 5) | (b4 << 4) | (b3 << 3) | (b2 << 2) | (b1 << 1) | (b0))
+ 
 void interrupt ISR(void)
 {
 	GIE = 0;
-	if(TMR1IF==1)
+	if(TMR2IF == 1)
 	{
-		TMR1IF = 0;
-		
-		TMR1 = 0x0BDC;
+		TMR2IF = 0;
 		RA0 = RA0^1;
 	}
 	GIE = 1;
 }
 
+ 
 void main(void)
 {
+	ADCON1 = 0x6;
+	TRISA = 0x00;
+	RA0 = 0;
+	T2CON = 0;
+	TMR2IE = 1;
+	TMR2IF = 0;
+	PEIE = 1;
+	GIE = 1;
+	PR2 = 0x7D;
+	TMR2ON = 1;
 	
-ADCON1 = 0x6; // set all pins in PORTA as digital I/O
-TRISA = 0x00; // sets all of PORTA to output
-RA0 = 0; // initialize RA0 to 0 (LED off)
-T1CON = 0x30; // 1:8 prescaler, internal clock, Timer1 off
-TMR1IE = 1; // enable Timer1 overflow interrupt (PIE1 reg)
-TMR1IF = 0; // reset interrupt flag (PIR1 reg)
-PEIE = 1; // enable all peripheral interrupt (INTCON reg)
-GIE = 1; // enable all unmasked interrupts (INTCON reg)
-TMR1 = 0x0BDC; // counter starts counting at 0x0BDC (3036)
-TMR1ON = 1; // Turns on Timer1 (T1CON reg)
-
-for(;;) // foreground routine
+	for (;;)
 	{
 	}
-	
 }
