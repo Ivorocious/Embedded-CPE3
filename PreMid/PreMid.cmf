@@ -1,0 +1,445 @@
+%CMF
+# %PSECTS Section
+# For each object file, details of its psects are enumerated here.
+# The begining of the section is indicated by %PSECTS.  The first
+# line indicates the name of the first object file, e.g.
+#    $foo.obj
+# Each line that follows describes a psect in that object file, until
+# the next object file.  The lines that describe a psect have the
+# format:
+#    <psect name> <class name> <space> <link address> <load addresses> <length> <delta>
+# All addresses and the length are given in unqualified hexadecimal
+# in delta units.  Any other numeric values are decimal.
+%PSECTS
+$startup.obj
+end_init CODE 0 12 12 3 2
+reset_vec CODE 0 0 0 3 2
+config CONFIG 0 2007 2007 1 2
+$PreMid.obj
+cinit CODE 0 15 15 5 2
+intentry CODE 0 4 4 E 2
+text6 CODE 0 231 231 16 2
+text5 CODE 0 219 219 18 2
+text4 CODE 0 25A 25A 13 2
+text3 CODE 0 1BE 1BE 35 2
+text2 CODE 0 247 247 13 2
+text1 CODE 0 1F3 1F3 26 2
+maintext CODE 0 1A 1A 1A4 2
+cstackBANK0 BANK0 1 20 20 C 1
+cstackCOMMON COMMON 1 70 70 9 1
+bitbssCOMMON COMMON 1 3C8 79 2 1
+# %UNUSED Section
+# This section enumerates the unused ranges of each CLASS. Each entry
+# is described on a single line as follows:
+#    <class name> <range> <delta>
+# Addresses given in the range are in hexadecimal and units of delta.
+%UNUSED
+BANK0 002C-006F 1
+BANK1 00A0-00EF 1
+BANK2 0110-016F 1
+BANK3 0190-01EF 1
+CODE 0003-0003 2
+CODE 026D-1FFF 2
+COMMON 007A-007D 1
+CONST 0003-0003 2
+CONST 026D-1FFF 2
+EEDATA 2100-21FF 2
+ENTRY 0003-0003 2
+ENTRY 026D-1FFF 2
+IDLOC 2000-2003 2
+RAM 002C-006F 1
+RAM 00A0-00EF 1
+RAM 0110-016F 1
+RAM 0190-01EF 1
+SFR0 0000-001F 1
+SFR1 0080-009F 1
+SFR2 0100-010F 1
+SFR3 0180-018F 1
+STACK 0110-016F 1
+STRCODE 0003-0003 2
+STRCODE 026D-1FFF 2
+STRING 0003-0003 2
+STRING 026D-1FFF 2
+# %LINETAB Section
+# This section enumerates the file/line to address mappings.
+# The beginning of the section is indicated by %LINETAB.
+# The first line indicates the name of the first object file, e.g.
+#   $foo.obj
+# Each line that follows describes a single mapping until the next
+# object file.  Mappings have the following format:
+#    <file name>:<line number> <address> <psect name> <class name>
+# The address is absolute and given given in unqualified hex 
+# in delta units of the psect. All mappings within an object file
+# are in ascending order of addresses.
+# All other numeric values are in decimal.
+%LINETAB
+$PreMid.obj
+"C:\Program Files (x86)\Microchip\xc8\v1.33\include\pic16f877a.h":2761 0 text0 CODE
+"C:\Users\ivorr\OneDrive\Documents\abEMBEDDED\PreMid\PreMidPrac.c":15 4 intentry CODE
+"C:\Users\ivorr\OneDrive\Documents\abEMBEDDED\PreMid\PreMid.as":232 15 cinit CODE
+"C:\Users\ivorr\OneDrive\Documents\abEMBEDDED\PreMid\PreMid.as":235 15 cinit CODE
+"C:\Users\ivorr\OneDrive\Documents\abEMBEDDED\PreMid\PreMid.as":248 15 cinit CODE
+"C:\Users\ivorr\OneDrive\Documents\abEMBEDDED\PreMid\PreMid.as":254 16 cinit CODE
+"C:\Users\ivorr\OneDrive\Documents\abEMBEDDED\PreMid\PreMid.as":255 16 cinit CODE
+"C:\Users\ivorr\OneDrive\Documents\abEMBEDDED\PreMid\PreMid.as":256 17 cinit CODE
+"C:\Users\ivorr\OneDrive\Documents\abEMBEDDED\PreMid\PreMidPrac.c":83 1A maintext CODE
+"C:\Users\ivorr\OneDrive\Documents\abEMBEDDED\PreMid\PreMidPrac.c":85 1A maintext CODE
+"C:\Users\ivorr\OneDrive\Documents\abEMBEDDED\PreMid\PreMidPrac.c":86 1E maintext CODE
+"C:\Users\ivorr\OneDrive\Documents\abEMBEDDED\PreMid\PreMidPrac.c":87 1F maintext CODE
+"C:\Users\ivorr\OneDrive\Documents\abEMBEDDED\PreMid\PreMidPrac.c":91 21 maintext CODE
+"C:\Users\ivorr\OneDrive\Documents\abEMBEDDED\PreMid\PreMidPrac.c":92 24 maintext CODE
+"C:\Users\ivorr\OneDrive\Documents\abEMBEDDED\PreMid\PreMidPrac.c":94 25 maintext CODE
+"C:\Users\ivorr\OneDrive\Documents\abEMBEDDED\PreMid\PreMidPrac.c":96 29 maintext CODE
+"C:\Users\ivorr\OneDrive\Documents\abEMBEDDED\PreMid\PreMidPrac.c":98 2E maintext CODE
+"C:\Users\ivorr\OneDrive\Documents\abEMBEDDED\PreMid\PreMidPrac.c":100 32 maintext CODE
+"C:\Users\ivorr\OneDrive\Documents\abEMBEDDED\PreMid\PreMidPrac.c":101 33 maintext CODE
+"C:\Users\ivorr\OneDrive\Documents\abEMBEDDED\PreMid\PreMidPrac.c":103 34 maintext CODE
+"C:\Users\ivorr\OneDrive\Documents\abEMBEDDED\PreMid\PreMidPrac.c":104 35 maintext CODE
+"C:\Users\ivorr\OneDrive\Documents\abEMBEDDED\PreMid\PreMidPrac.c":106 36 maintext CODE
+"C:\Users\ivorr\OneDrive\Documents\abEMBEDDED\PreMid\PreMidPrac.c":108 37 maintext CODE
+"C:\Users\ivorr\OneDrive\Documents\abEMBEDDED\PreMid\PreMidPrac.c":109 3D maintext CODE
+"C:\Users\ivorr\OneDrive\Documents\abEMBEDDED\PreMid\PreMidPrac.c":110 43 maintext CODE
+"C:\Users\ivorr\OneDrive\Documents\abEMBEDDED\PreMid\PreMidPrac.c":111 49 maintext CODE
+"C:\Users\ivorr\OneDrive\Documents\abEMBEDDED\PreMid\PreMidPrac.c":115 4F maintext CODE
+"C:\Users\ivorr\OneDrive\Documents\abEMBEDDED\PreMid\PreMidPrac.c":116 50 maintext CODE
+"C:\Users\ivorr\OneDrive\Documents\abEMBEDDED\PreMid\PreMidPrac.c":119 52 maintext CODE
+"C:\Users\ivorr\OneDrive\Documents\abEMBEDDED\PreMid\PreMidPrac.c":120 56 maintext CODE
+"C:\Users\ivorr\OneDrive\Documents\abEMBEDDED\PreMid\PreMidPrac.c":121 5B maintext CODE
+"C:\Users\ivorr\OneDrive\Documents\abEMBEDDED\PreMid\PreMidPrac.c":122 63 maintext CODE
+"C:\Users\ivorr\OneDrive\Documents\abEMBEDDED\PreMid\PreMidPrac.c":123 67 maintext CODE
+"C:\Users\ivorr\OneDrive\Documents\abEMBEDDED\PreMid\PreMidPrac.c":125 68 maintext CODE
+"C:\Users\ivorr\OneDrive\Documents\abEMBEDDED\PreMid\PreMidPrac.c":126 6D maintext CODE
+"C:\Users\ivorr\OneDrive\Documents\abEMBEDDED\PreMid\PreMidPrac.c":127 6F maintext CODE
+"C:\Users\ivorr\OneDrive\Documents\abEMBEDDED\PreMid\PreMidPrac.c":128 76 maintext CODE
+"C:\Users\ivorr\OneDrive\Documents\abEMBEDDED\PreMid\PreMidPrac.c":129 7E maintext CODE
+"C:\Users\ivorr\OneDrive\Documents\abEMBEDDED\PreMid\PreMidPrac.c":130 86 maintext CODE
+"C:\Users\ivorr\OneDrive\Documents\abEMBEDDED\PreMid\PreMidPrac.c":131 8E maintext CODE
+"C:\Users\ivorr\OneDrive\Documents\abEMBEDDED\PreMid\PreMidPrac.c":132 96 maintext CODE
+"C:\Users\ivorr\OneDrive\Documents\abEMBEDDED\PreMid\PreMidPrac.c":133 9E maintext CODE
+"C:\Users\ivorr\OneDrive\Documents\abEMBEDDED\PreMid\PreMidPrac.c":134 A6 maintext CODE
+"C:\Users\ivorr\OneDrive\Documents\abEMBEDDED\PreMid\PreMidPrac.c":135 AE maintext CODE
+"C:\Users\ivorr\OneDrive\Documents\abEMBEDDED\PreMid\PreMidPrac.c":136 B6 maintext CODE
+"C:\Users\ivorr\OneDrive\Documents\abEMBEDDED\PreMid\PreMidPrac.c":137 BE maintext CODE
+"C:\Users\ivorr\OneDrive\Documents\abEMBEDDED\PreMid\PreMidPrac.c":138 C6 maintext CODE
+"C:\Users\ivorr\OneDrive\Documents\abEMBEDDED\PreMid\PreMidPrac.c":141 CE maintext CODE
+"C:\Users\ivorr\OneDrive\Documents\abEMBEDDED\PreMid\PreMidPrac.c":143 CE maintext CODE
+"C:\Users\ivorr\OneDrive\Documents\abEMBEDDED\PreMid\PreMidPrac.c":144 D2 maintext CODE
+"C:\Users\ivorr\OneDrive\Documents\abEMBEDDED\PreMid\PreMidPrac.c":145 D9 maintext CODE
+"C:\Users\ivorr\OneDrive\Documents\abEMBEDDED\PreMid\PreMidPrac.c":146 DF maintext CODE
+"C:\Users\ivorr\OneDrive\Documents\abEMBEDDED\PreMid\PreMidPrac.c":147 E5 maintext CODE
+"C:\Users\ivorr\OneDrive\Documents\abEMBEDDED\PreMid\PreMidPrac.c":148 EB maintext CODE
+"C:\Users\ivorr\OneDrive\Documents\abEMBEDDED\PreMid\PreMidPrac.c":149 F1 maintext CODE
+"C:\Users\ivorr\OneDrive\Documents\abEMBEDDED\PreMid\PreMidPrac.c":150 F4 maintext CODE
+"C:\Users\ivorr\OneDrive\Documents\abEMBEDDED\PreMid\PreMidPrac.c":151 F5 maintext CODE
+"C:\Users\ivorr\OneDrive\Documents\abEMBEDDED\PreMid\PreMidPrac.c":152 101 maintext CODE
+"C:\Users\ivorr\OneDrive\Documents\abEMBEDDED\PreMid\PreMidPrac.c":153 102 maintext CODE
+"C:\Users\ivorr\OneDrive\Documents\abEMBEDDED\PreMid\PreMidPrac.c":154 108 maintext CODE
+"C:\Users\ivorr\OneDrive\Documents\abEMBEDDED\PreMid\PreMidPrac.c":155 114 maintext CODE
+"C:\Users\ivorr\OneDrive\Documents\abEMBEDDED\PreMid\PreMidPrac.c":156 11A maintext CODE
+"C:\Users\ivorr\OneDrive\Documents\abEMBEDDED\PreMid\PreMidPrac.c":157 120 maintext CODE
+"C:\Users\ivorr\OneDrive\Documents\abEMBEDDED\PreMid\PreMidPrac.c":158 129 maintext CODE
+"C:\Users\ivorr\OneDrive\Documents\abEMBEDDED\PreMid\PreMidPrac.c":163 12D maintext CODE
+"C:\Users\ivorr\OneDrive\Documents\abEMBEDDED\PreMid\PreMidPrac.c":164 13B maintext CODE
+"C:\Users\ivorr\OneDrive\Documents\abEMBEDDED\PreMid\PreMidPrac.c":170 142 maintext CODE
+"C:\Users\ivorr\OneDrive\Documents\abEMBEDDED\PreMid\PreMidPrac.c":171 148 maintext CODE
+"C:\Users\ivorr\OneDrive\Documents\abEMBEDDED\PreMid\PreMidPrac.c":172 14E maintext CODE
+"C:\Users\ivorr\OneDrive\Documents\abEMBEDDED\PreMid\PreMidPrac.c":173 154 maintext CODE
+"C:\Users\ivorr\OneDrive\Documents\abEMBEDDED\PreMid\PreMidPrac.c":174 15A maintext CODE
+"C:\Users\ivorr\OneDrive\Documents\abEMBEDDED\PreMid\PreMidPrac.c":175 160 maintext CODE
+"C:\Users\ivorr\OneDrive\Documents\abEMBEDDED\PreMid\PreMidPrac.c":176 166 maintext CODE
+"C:\Users\ivorr\OneDrive\Documents\abEMBEDDED\PreMid\PreMidPrac.c":177 16C maintext CODE
+"C:\Users\ivorr\OneDrive\Documents\abEMBEDDED\PreMid\PreMidPrac.c":178 170 maintext CODE
+"C:\Users\ivorr\OneDrive\Documents\abEMBEDDED\PreMid\PreMidPrac.c":179 17C maintext CODE
+"C:\Users\ivorr\OneDrive\Documents\abEMBEDDED\PreMid\PreMidPrac.c":180 17D maintext CODE
+"C:\Users\ivorr\OneDrive\Documents\abEMBEDDED\PreMid\PreMidPrac.c":181 182 maintext CODE
+"C:\Users\ivorr\OneDrive\Documents\abEMBEDDED\PreMid\PreMidPrac.c":182 184 maintext CODE
+"C:\Users\ivorr\OneDrive\Documents\abEMBEDDED\PreMid\PreMidPrac.c":183 18A maintext CODE
+"C:\Users\ivorr\OneDrive\Documents\abEMBEDDED\PreMid\PreMidPrac.c":184 193 maintext CODE
+"C:\Users\ivorr\OneDrive\Documents\abEMBEDDED\PreMid\PreMidPrac.c":185 199 maintext CODE
+"C:\Users\ivorr\OneDrive\Documents\abEMBEDDED\PreMid\PreMidPrac.c":186 19F maintext CODE
+"C:\Users\ivorr\OneDrive\Documents\abEMBEDDED\PreMid\PreMidPrac.c":188 1A1 maintext CODE
+"C:\Users\ivorr\OneDrive\Documents\abEMBEDDED\PreMid\PreMidPrac.c":189 1AF maintext CODE
+"C:\Users\ivorr\OneDrive\Documents\abEMBEDDED\PreMid\PreMidPrac.c":190 1B3 maintext CODE
+"C:\Users\ivorr\OneDrive\Documents\abEMBEDDED\PreMid\PreMidPrac.c":191 1B9 maintext CODE
+"C:\Users\ivorr\OneDrive\Documents\abEMBEDDED\PreMid\PreMidPrac.c":41 1BE text3 CODE
+"C:\Users\ivorr\OneDrive\Documents\abEMBEDDED\PreMid\PreMidPrac.c":44 1BE text3 CODE
+"C:\Users\ivorr\OneDrive\Documents\abEMBEDDED\PreMid\PreMidPrac.c":46 1CA text3 CODE
+"C:\Users\ivorr\OneDrive\Documents\abEMBEDDED\PreMid\PreMidPrac.c":44 1EA text3 CODE
+"C:\Users\ivorr\OneDrive\Documents\abEMBEDDED\PreMid\PreMidPrac.c":62 1F3 text1 CODE
+"C:\Users\ivorr\OneDrive\Documents\abEMBEDDED\PreMid\PreMidPrac.c":64 1F3 text1 CODE
+"C:\Users\ivorr\OneDrive\Documents\abEMBEDDED\PreMid\PreMidPrac.c":65 1FC text1 CODE
+"C:\Users\ivorr\OneDrive\Documents\abEMBEDDED\PreMid\PreMidPrac.c":66 202 text1 CODE
+"C:\Users\ivorr\OneDrive\Documents\abEMBEDDED\PreMid\PreMidPrac.c":67 208 text1 CODE
+"C:\Users\ivorr\OneDrive\Documents\abEMBEDDED\PreMid\PreMidPrac.c":68 20E text1 CODE
+"C:\Users\ivorr\OneDrive\Documents\abEMBEDDED\PreMid\PreMidPrac.c":69 214 text1 CODE
+"C:\Users\ivorr\OneDrive\Documents\abEMBEDDED\PreMid\PreMidPrac.c":70 218 text1 CODE
+"C:\Users\ivorr\OneDrive\Documents\abEMBEDDED\PreMid\PreMidPrac.c":30 219 text5 CODE
+"C:\Users\ivorr\OneDrive\Documents\abEMBEDDED\PreMid\PreMidPrac.c":31 219 text5 CODE
+"C:\Users\ivorr\OneDrive\Documents\abEMBEDDED\PreMid\PreMidPrac.c":33 21B text5 CODE
+"C:\Users\ivorr\OneDrive\Documents\abEMBEDDED\PreMid\PreMidPrac.c":38 21B text5 CODE
+"C:\Users\ivorr\OneDrive\Documents\abEMBEDDED\PreMid\PreMidPrac.c":34 227 text5 CODE
+"C:\Users\ivorr\OneDrive\Documents\abEMBEDDED\PreMid\PreMidPrac.c":35 229 text5 CODE
+"C:\Users\ivorr\OneDrive\Documents\abEMBEDDED\PreMid\PreMidPrac.c":36 22F text5 CODE
+"C:\Users\ivorr\OneDrive\Documents\abEMBEDDED\PreMid\PreMidPrac.c":33 230 text5 CODE
+"C:\Users\ivorr\OneDrive\Documents\abEMBEDDED\PreMid\PreMidPrac.c":15 231 text6 CODE
+"C:\Users\ivorr\OneDrive\Documents\abEMBEDDED\PreMid\PreMidPrac.c":16 231 text6 CODE
+"C:\Users\ivorr\OneDrive\Documents\abEMBEDDED\PreMid\PreMidPrac.c":18 232 text6 CODE
+"C:\Users\ivorr\OneDrive\Documents\abEMBEDDED\PreMid\PreMidPrac.c":19 234 text6 CODE
+"C:\Users\ivorr\OneDrive\Documents\abEMBEDDED\PreMid\PreMidPrac.c":20 235 text6 CODE
+"C:\Users\ivorr\OneDrive\Documents\abEMBEDDED\PreMid\PreMidPrac.c":21 236 text6 CODE
+"C:\Users\ivorr\OneDrive\Documents\abEMBEDDED\PreMid\PreMidPrac.c":22 237 text6 CODE
+"C:\Users\ivorr\OneDrive\Documents\abEMBEDDED\PreMid\PreMidPrac.c":23 239 text6 CODE
+"C:\Users\ivorr\OneDrive\Documents\abEMBEDDED\PreMid\PreMidPrac.c":24 23A text6 CODE
+"C:\Users\ivorr\OneDrive\Documents\abEMBEDDED\PreMid\PreMidPrac.c":27 23B text6 CODE
+"C:\Users\ivorr\OneDrive\Documents\abEMBEDDED\PreMid\PreMidPrac.c":28 23C text6 CODE
+"C:\Users\ivorr\OneDrive\Documents\abEMBEDDED\PreMid\PreMidPrac.c":51 247 text2 CODE
+"C:\Users\ivorr\OneDrive\Documents\abEMBEDDED\PreMid\PreMidPrac.c":53 248 text2 CODE
+"C:\Users\ivorr\OneDrive\Documents\abEMBEDDED\PreMid\PreMidPrac.c":54 24C text2 CODE
+"C:\Users\ivorr\OneDrive\Documents\abEMBEDDED\PreMid\PreMidPrac.c":55 24D text2 CODE
+"C:\Users\ivorr\OneDrive\Documents\abEMBEDDED\PreMid\PreMidPrac.c":56 24E text2 CODE
+"C:\Users\ivorr\OneDrive\Documents\abEMBEDDED\PreMid\PreMidPrac.c":57 24F text2 CODE
+"C:\Users\ivorr\OneDrive\Documents\abEMBEDDED\PreMid\PreMidPrac.c":58 256 text2 CODE
+"C:\Users\ivorr\OneDrive\Documents\abEMBEDDED\PreMid\PreMidPrac.c":59 259 text2 CODE
+"C:\Users\ivorr\OneDrive\Documents\abEMBEDDED\PreMid\PreMidPrac.c":73 25A text4 CODE
+"C:\Users\ivorr\OneDrive\Documents\abEMBEDDED\PreMid\PreMidPrac.c":75 25D text4 CODE
+"C:\Users\ivorr\OneDrive\Documents\abEMBEDDED\PreMid\PreMidPrac.c":76 25F text4 CODE
+"C:\Users\ivorr\OneDrive\Documents\abEMBEDDED\PreMid\PreMidPrac.c":77 260 text4 CODE
+"C:\Users\ivorr\OneDrive\Documents\abEMBEDDED\PreMid\PreMidPrac.c":78 261 text4 CODE
+"C:\Users\ivorr\OneDrive\Documents\abEMBEDDED\PreMid\PreMidPrac.c":79 262 text4 CODE
+"C:\Users\ivorr\OneDrive\Documents\abEMBEDDED\PreMid\PreMidPrac.c":80 269 text4 CODE
+"C:\Users\ivorr\OneDrive\Documents\abEMBEDDED\PreMid\PreMidPrac.c":81 26C text4 CODE
+$startup.obj
+"C:\Users\ivorr\OneDrive\Documents\abEMBEDDED\PreMid\startup.as":39 0 functab CODE
+"C:\Users\ivorr\OneDrive\Documents\abEMBEDDED\PreMid\startup.as":40 0 functab CODE
+"C:\Users\ivorr\OneDrive\Documents\abEMBEDDED\PreMid\startup.as":41 0 functab CODE
+"C:\Users\ivorr\OneDrive\Documents\abEMBEDDED\PreMid\startup.as":42 0 functab CODE
+"C:\Users\ivorr\OneDrive\Documents\abEMBEDDED\PreMid\startup.as":43 0 functab CODE
+"C:\Users\ivorr\OneDrive\Documents\abEMBEDDED\PreMid\startup.as":44 0 functab CODE
+"C:\Users\ivorr\OneDrive\Documents\abEMBEDDED\PreMid\startup.as":63 0 reset_vec CODE
+"C:\Users\ivorr\OneDrive\Documents\abEMBEDDED\PreMid\startup.as":68 0 reset_vec CODE
+"C:\Users\ivorr\OneDrive\Documents\abEMBEDDED\PreMid\startup.as":73 12 init CODE
+"C:\Users\ivorr\OneDrive\Documents\abEMBEDDED\PreMid\startup.as":76 12 end_init CODE
+# %SYMTAB Section
+# An enumeration of all symbols in the program.
+# The beginning of the section is indicated by %SYMTAB.
+# Each line describes a single symbol as follows:
+#    <label> <value> [-]<load-adj> <class> <space> <psect> <file-name>
+# The value and load-adj are both in unqualified hexadecimal.
+# All other numeric values are in decimal.  The load-adj is the
+# quantity one needs to add to the symbol value in order to obtain the load
+# address of the symbol.  This value may be signed. If the symbol
+# was defined in a psect then <psect> will be "-". File-name
+# is the name of the object file in which the symbol was defined.
+%SYMTAB
+__CFG_WRT$OFF 0 0 ABS 0 - PreMid.obj
+_RB0 30 0 ABS 0 - PreMid.obj
+_RB5 35 0 ABS 0 - PreMid.obj
+_RB6 36 0 ABS 0 - PreMid.obj
+_RB7 37 0 ABS 0 - PreMid.obj
+__S0 2008 0 ABS 0 - -
+__S1 7A 0 ABS 0 - -
+__S2 0 0 ABS 0 - -
+__S3 0 0 ABS 0 - -
+_GIE 5F 0 ABS 0 - PreMid.obj
+_ISR 462 0 CODE 0 text6 PreMid.obj
+__Hintentry 24 0 CODE 0 intentry -
+__Lintentry 8 0 CODE 0 intentry -
+__CFG_BOREN$ON 0 0 ABS 0 - PreMid.obj
+__pintentry 8 0 CODE 0 intentry PreMid.obj
+__CFG_PWRTE$ON 0 0 ABS 0 - PreMid.obj
+_INTE 5C 0 ABS 0 - PreMid.obj
+_INTF 59 0 ABS 0 - PreMid.obj
+_main 34 0 CODE 0 maintext PreMid.obj
+___sp 0 0 STACK 2 stack startup.obj
+btemp 7E 0 ABS 0 - PreMid.obj
+ltemp 7E 0 ABS 0 - PreMid.obj
+ttemp 7E 0 ABS 0 - PreMid.obj
+wtemp 7E 0 ABS 0 - PreMid.obj
+start 24 0 CODE 0 init startup.obj
+_TRISB 86 0 ABS 0 - PreMid.obj
+_TRISC 87 0 ABS 0 - PreMid.obj
+reset_vec 0 0 CODE 0 reset_vec startup.obj
+_TRISD 88 0 ABS 0 - PreMid.obj
+_PORTC 7 0 ABS 0 - PreMid.obj
+_PORTD 8 0 ABS 0 - PreMid.obj
+ltemp0 7E 0 ABS 0 - PreMid.obj
+ttemp0 7E 0 ABS 0 - PreMid.obj
+wtemp0 7E 0 ABS 0 - PreMid.obj
+ltemp1 82 0 ABS 0 - PreMid.obj
+ttemp1 81 0 ABS 0 - PreMid.obj
+wtemp1 80 0 ABS 0 - PreMid.obj
+ltemp2 86 0 ABS 0 - PreMid.obj
+ttemp2 84 0 ABS 0 - PreMid.obj
+wtemp2 82 0 ABS 0 - PreMid.obj
+ltemp3 80 0 ABS 0 - PreMid.obj
+ttemp3 87 0 ABS 0 - PreMid.obj
+wtemp3 84 0 ABS 0 - PreMid.obj
+ttemp4 7F 0 ABS 0 - PreMid.obj
+wtemp4 86 0 ABS 0 - PreMid.obj
+wtemp5 88 0 ABS 0 - PreMid.obj
+__end_of_delay 462 0 CODE 0 text5 PreMid.obj
+wtemp6 7F 0 ABS 0 - PreMid.obj
+interrupt_function 8 0 CODE 0 intentry PreMid.obj
+__Hconfig 4010 0 CONFIG 0 config -
+__Lconfig 400E 0 CONFIG 0 config -
+__Hram 0 0 ABS 0 ram -
+__Lram 0 0 ABS 0 ram -
+_delay 432 0 CODE 0 text5 PreMid.obj
+_dataCtrl 4B4 0 CODE 0 text4 PreMid.obj
+__end_of_ISR 48E 0 CODE 0 text6 PreMid.obj
+_instCtrl 48E 0 CODE 0 text2 PreMid.obj
+__Hfunctab 0 0 CODE 0 functab -
+__Lfunctab 0 0 CODE 0 functab -
+main@speed 2B 0 BANK0 1 cstackBANK0 PreMid.obj
+_OPTION_REG 81 0 ABS 0 - PreMid.obj
+__Hcommon 0 0 ABS 0 common -
+__Lcommon 0 0 ABS 0 common -
+__Heeprom_data 0 0 EEDATA 3 eeprom_data -
+__Leeprom_data 0 0 EEDATA 3 eeprom_data -
+instCtrl@INST 76 0 COMMON 1 cstackCOMMON PreMid.obj
+_TMR0IE 5D 0 ABS 0 - PreMid.obj
+_TMR0IF 5A 0 ABS 0 - PreMid.obj
+___int_sp 0 0 STACK 2 stack startup.obj
+__Habs1 0 0 ABS 0 abs1 -
+__Labs1 0 0 ABS 0 abs1 -
+_myINTF 3C8 -34F COMMON 1 bitbssCOMMON PreMid.obj
+__Hsfr0 0 0 ABS 0 sfr0 -
+__Lsfr0 0 0 ABS 0 sfr0 -
+__Hsfr1 0 0 ABS 0 sfr1 -
+__Lsfr1 0 0 ABS 0 sfr1 -
+__Hsfr2 0 0 ABS 0 sfr2 -
+__Lsfr2 0 0 ABS 0 sfr2 -
+__Hsfr3 0 0 ABS 0 sfr3 -
+__Lsfr3 0 0 ABS 0 sfr3 -
+_delay1 37C 0 CODE 0 text3 PreMid.obj
+__size_of_delay 0 0 ABS 0 - PreMid.obj
+dataCtrl@DATA 20 0 BANK0 1 cstackBANK0 PreMid.obj
+__Hcode 0 0 ABS 0 code -
+__Lcode 0 0 ABS 0 code -
+stackhi 0 0 ABS 0 - startup.obj
+__HcstackBANK0 0 0 ABS 0 cstackBANK0 -
+__LcstackBANK0 0 0 ABS 0 cstackBANK0 -
+__pcstackBANK0 20 0 BANK0 1 cstackBANK0 PreMid.obj
+stacklo 0 0 ABS 0 - startup.obj
+saved_w 7E 0 ABS 0 - PreMid.obj
+__Hinit 24 0 CODE 0 init -
+__Linit 24 0 CODE 0 init -
+__end_of_main 37C 0 CODE 0 maintext PreMid.obj
+__Htext 0 0 ABS 0 text -
+__Ltext 0 0 ABS 0 text -
+end_of_initialization 2C 0 CODE 0 cinit PreMid.obj
+__size_of_ISR 0 0 ABS 0 - PreMid.obj
+__end_of_instCtrl 4B4 0 CODE 0 text2 PreMid.obj
+__size_of_initLCD 0 0 ABS 0 - PreMid.obj
+main@fspeed 2A 0 BANK0 1 cstackBANK0 PreMid.obj
+__CFG_FOSC$XT 0 0 ABS 0 - PreMid.obj
+__Hstrings 0 0 ABS 0 strings -
+__Lstrings 0 0 ABS 0 strings -
+main@LSB 29 0 BANK0 1 cstackBANK0 PreMid.obj
+main@MSB 28 0 BANK0 1 cstackBANK0 PreMid.obj
+_initLCD 3E6 0 CODE 0 text1 PreMid.obj
+__Hbank0 0 0 ABS 0 bank0 -
+__Lbank0 0 0 ABS 0 bank0 -
+__Hbank1 0 0 ABS 0 bank1 -
+__Lbank1 0 0 ABS 0 bank1 -
+__Hbank2 0 0 ABS 0 bank2 -
+__Lbank2 0 0 ABS 0 bank2 -
+__end_of_dataCtrl 4DA 0 CODE 0 text4 PreMid.obj
+__Hbank3 0 0 ABS 0 bank3 -
+__Lbank3 0 0 ABS 0 bank3 -
+___latbits 2 0 ABS 0 - PreMid.obj
+__Hpowerup 0 0 CODE 0 powerup -
+__Lpowerup 0 0 CODE 0 powerup -
+__ptext0 0 0 CODE 0 text0 PreMid.obj
+__ptext1 3E6 0 CODE 0 text1 PreMid.obj
+__ptext2 48E 0 CODE 0 text2 PreMid.obj
+__ptext3 37C 0 CODE 0 text3 PreMid.obj
+__ptext4 4B4 0 CODE 0 text4 PreMid.obj
+__ptext5 432 0 CODE 0 text5 PreMid.obj
+__ptext6 462 0 CODE 0 text6 PreMid.obj
+__Hclrtext 0 0 ABS 0 clrtext -
+__Lclrtext 0 0 ABS 0 clrtext -
+delay1@i 20 0 BANK0 1 cstackBANK0 PreMid.obj
+delay1@j 22 0 BANK0 1 cstackBANK0 PreMid.obj
+__end_of__initialization 2C 0 CODE 0 cinit PreMid.obj
+__Hidloc 0 0 IDLOC 0 idloc -
+__Lidloc 0 0 IDLOC 0 idloc -
+__Hstack 0 0 STACK 2 stack -
+__Lstack 0 0 STACK 2 stack -
+__Hspace_0 2008 0 ABS 0 - -
+__Lspace_0 0 0 ABS 0 - -
+__Hspace_1 3CA 0 ABS 0 - -
+__Lspace_1 0 0 ABS 0 - -
+__Hspace_2 0 0 ABS 0 - -
+__Lspace_2 0 0 ABS 0 - -
+__Hcinit 34 0 CODE 0 cinit -
+__Lcinit 2A 0 CODE 0 cinit -
+__Hspace_3 0 0 ABS 0 - -
+__Lspace_3 0 0 ABS 0 - -
+__size_of_main 0 0 ABS 0 - PreMid.obj
+main@STORE 26 0 BANK0 1 cstackBANK0 PreMid.obj
+delay1@MUL 74 0 COMMON 1 cstackCOMMON PreMid.obj
+_myTMR0IF 3C9 -34F COMMON 1 bitbssCOMMON PreMid.obj
+__Hend_init 2A 0 CODE 0 end_init -
+__Lend_init 24 0 CODE 0 end_init -
+main@DATA 27 0 BANK0 1 cstackBANK0 PreMid.obj
+__Hreset_vec 6 0 CODE 0 reset_vec -
+__Lreset_vec 0 0 CODE 0 reset_vec -
+__size_of_instCtrl 0 0 ABS 0 - PreMid.obj
+intlevel0 0 0 CODE 0 functab startup.obj
+__CFG_WDTE$OFF 0 0 ABS 0 - PreMid.obj
+intlevel1 0 0 CODE 0 functab startup.obj
+intlevel2 0 0 CODE 0 functab startup.obj
+intlevel3 0 0 CODE 0 functab startup.obj
+delay@count 74 0 COMMON 1 cstackCOMMON PreMid.obj
+intlevel4 0 0 CODE 0 functab startup.obj
+intlevel5 0 0 CODE 0 functab startup.obj
+__HcstackCOMMON 0 0 ABS 0 cstackCOMMON -
+__LcstackCOMMON 0 0 ABS 0 cstackCOMMON -
+__pcstackCOMMON 70 0 COMMON 1 cstackCOMMON PreMid.obj
+__CFG_CPD$OFF 0 0 ABS 0 - PreMid.obj
+start_initialization 2A 0 CODE 0 cinit PreMid.obj
+__Hmaintext 0 0 ABS 0 maintext -
+__Lmaintext 0 0 ABS 0 maintext -
+__pmaintext 34 0 CODE 0 maintext PreMid.obj
+__size_of_delay1 0 0 ABS 0 - PreMid.obj
+delay@of_count 77 0 COMMON 1 cstackCOMMON PreMid.obj
+__initialization 2A 0 CODE 0 cinit PreMid.obj
+__end_of_initLCD 432 0 CODE 0 text1 PreMid.obj
+__end_of_delay1 3E6 0 CODE 0 text3 PreMid.obj
+__HbitbssCOMMON 0 0 ABS 0 bitbssCOMMON -
+__LbitbssCOMMON 0 0 ABS 0 bitbssCOMMON -
+__CFG_CP$OFF 0 0 ABS 0 - PreMid.obj
+__pbitbssCOMMON 3C8 -34F COMMON 1 bitbssCOMMON PreMid.obj
+__size_of_dataCtrl 0 0 ABS 0 - PreMid.obj
+__CFG_LVP$OFF 0 0 ABS 0 - PreMid.obj
+# %SPLITSTAB Section
+# This section enumerates all the psect splits performed by the assembler.
+# The beginning of the section is indicated by %SPLITSTAB.
+# Each line is a record a particular split, where the parent psect in on
+# the left and the child on the right.  Note that a child psect is always
+# split form the top of the parent psect. All splits from a given parent
+# are listed in the order in which they occurred.
+%SPLITSTAB
+# %DABS Section
+# This section contains a table of all usuage of the assember
+# directive DABS in the program. Each line has the following format:
+#   <name> <space> <address> <size>
+# If the DABS was originally labelled then that shall be <name>,
+# otherwise name will be "-".  The <space> number is in decimal.
+# <address> and <size> are in byte units as unqaulified hexadecimal
+%DABS
+- 1 7E 2
+# %SEGMENTS Section
+# This sections enumerates the segments of the program.  Each segment
+# is described on a single line as follows:
+#    <name> <space> <link address> <file address> <size> <delta>
+# Addresses and size are in unqualified hexadecimal.  The link address
+# and size are in units of delta. The file address is in units of bytes.
+# All other numeric quantities are in decimal.
+%SEGMENTS
+reset_vec 0 0 0 3 2
+intentry 0 4 8 269 2
+config 0 2007 400E 1 2
+cstackCOMMON 1 70 70 A 1
+cstackBANK0 1 20 20 C 1

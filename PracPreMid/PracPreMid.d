@@ -1,0 +1,1 @@
+ PracPreMid.d  PracPreMid.p1:  C:/Users/ivorr/OneDrive/Documents/abEMBEDDED/PracPreMid/PracPreMid.c
